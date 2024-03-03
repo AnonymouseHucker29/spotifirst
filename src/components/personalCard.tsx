@@ -49,7 +49,7 @@ const PersonalCard = () => {
     } else {
       signIn();
     }
-  }, [session]);
+  }, [session, status]);
 
   return (
     <Card className="flex flex-col justify-center items-center p-3">

@@ -45,7 +45,7 @@ const TopArtistsPage = () => {
     if (status !== "loading") {
       fetchSpotifyData();
     }
-  }, [session]);
+  }, [session, status]);
 
   if (status === "loading") return <Loading />;
   return (

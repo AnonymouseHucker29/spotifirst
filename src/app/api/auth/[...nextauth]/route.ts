@@ -77,10 +77,10 @@ const authOptions: NextAuthOptions = {
       session.user = token.user;
       return session;
     },
-    async redirect({ url, baseUrl }) {
-      if (url.startsWith("/")) return `${baseUrl}${url}`;
-      return baseUrl;
-    },
+    // async redirect({ url, baseUrl }) {
+    //   if (url.startsWith("/")) return `${baseUrl}${url}`;
+    //   return baseUrl;
+    // },
   },
   pages: {
     signIn: "/login",

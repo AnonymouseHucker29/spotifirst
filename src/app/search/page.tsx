@@ -30,26 +30,26 @@ const Search = () => {
     }
     setLoading(true);
 
+    const fetchSpotifyData = async () => {
+      try {
+        const data = await searchTracks(searchValue);
+        setCachedResults((prevState) => ({
+          ...prevState,
+          [searchValue]: data.tracks.items,
+        }));
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+        setError(`An error occurred while fetching data. ${error}`);
+      }
+    };
+
     const timerId = setTimeout(() => {
       fetchSpotifyData();
     }, 200);
 
     return () => clearTimeout(timerId);
-  }, [searchValue]);
-
-  const fetchSpotifyData = async () => {
-    try {
-      const data = await searchTracks(searchValue);
-      setCachedResults((prevState) => ({
-        ...prevState,
-        [searchValue]: data.tracks.items,
-      }));
-      setLoading(false);
-    } catch (error) {
-      setLoading(false);
-      setError(`An error occurred while fetching data. ${error}`);
-    }
-  };
+  }, [searchValue, cachedResults]);
 
   return (
     <section className="px-7 md:px-6 py-6 md:py-12 min-h-screen">
@@ -85,7 +85,7 @@ const Search = () => {
         {searchValue && (
           <p>
             Showing 10 personalized results related to:{" "}
-            <span className="font-bold">"{searchValue}"</span>
+            <span className="font-bold">&quot;{searchValue}&quot;</span>
           </p>
         )}
         {loading && (

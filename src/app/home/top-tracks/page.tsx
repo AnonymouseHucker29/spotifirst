@@ -44,7 +44,7 @@ const TopTracksPage = () => {
     if (status !== "loading") {
       fetchSpotifyData();
     }
-  }, [status]);
+  }, [session]);
 
   if (status === "loading") return <Loading />;
   return (

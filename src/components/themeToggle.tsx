@@ -11,7 +11,7 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setInitialTheme(theme);
-  }, []);
+  }, [theme]);
 
   if (!initialTheme) {
     return null;

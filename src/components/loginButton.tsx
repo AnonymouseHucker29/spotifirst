@@ -3,9 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { signIn } from "next-auth/react";
 import { IconBrandSpotify } from "@tabler/icons-react";
-import { forwardRef } from "react";
 
-const LoginButton = forwardRef(() => {
+const LoginButton = () => {
   return (
     <Button
       className="rounded-full bg-[#1DB954] scale-110 hover:scale-125 hover:bg-[#1DB954] transition-all p-6"
@@ -16,6 +15,6 @@ const LoginButton = forwardRef(() => {
       </span>
     </Button>
   );
-});
+};
 
 export default LoginButton;

@@ -1,6 +1,5 @@
 import "../styles/globals.css";
-import type { Metadata } from "next";
-import type { Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import { inter } from "@/fonts/fonts";
 import { ThemeProvider } from "@/components/themeProvider";
 import Navbar from "@/components/navbar";
@@ -11,7 +10,10 @@ export const metadata: Metadata = {
   title: "SpotiFirst",
   description: "Identify your first and favorite artists on Spotify.",
   applicationName: "SpotiFirst",
-  icons: "https://simpleicons.org/icons/spotify.svg",
+  authors: {
+    name: "Brent Baylon",
+    url: "https://github.com/AnonymouseHucker29",
+  },
 };
 
 export const viewport: Viewport = {
@@ -30,7 +32,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <NextAuthSessionProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className="antialiased bg-gradient-to-r from-indigo-900 dark:from-black via-purple-500 via-40% to-slate-400 dark:to-slate-800 to-90%">
+            <main className="antialiased bg-gradient-to-r from-indigo-600 dark:from-black via-purple-500 via-40% to-slate-400 dark:to-slate-800 to-90%">
               <Navbar />
               {children}
               <Footer />

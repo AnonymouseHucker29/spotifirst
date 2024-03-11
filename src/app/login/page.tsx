@@ -1,9 +1,16 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
+import LoginButton from "@/components/loginButton";
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import { IconBrandSpotify } from "@tabler/icons-react";
-import { signIn } from "next-auth/react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Login | SpotiFirst",
+  description: "Identify your first and favorite artists on Spotify.",
+  applicationName: "SpotiFirst",
+  authors: {
+    name: "Brent Baylon",
+    url: "https://github.com/AnonymouseHucker29",
+  },
+};
 
 const LoginPage = () => {
   return (
@@ -17,15 +24,7 @@ const LoginPage = () => {
           </CardTitle>
         </CardHeader>
       </Card>
-      <Button
-        onClick={() => signIn("spotify")}
-        className="p-8 gap-x-1 rounded-full bg-[#1DB954] border-2 border-[#1DB954] hover:bg-green-600 hover:border-2"
-      >
-        <p className="text-lg">SIGN IN ON</p>
-        <span>
-          <IconBrandSpotify />
-        </span>
-      </Button>
+      <LoginButton />
     </div>
   );
 };

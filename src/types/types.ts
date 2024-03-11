@@ -15,6 +15,9 @@ export type Profile = {
 export type Tracks = {
   id: string;
   name: string;
+  external_urls: {
+    spotify: string;
+  };
   artists: {
     name: string;
     id: string;

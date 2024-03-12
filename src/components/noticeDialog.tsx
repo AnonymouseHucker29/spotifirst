@@ -37,7 +37,7 @@ const NoticeDialog = () => {
           <p>
             If you wish to test this app in development mode, please reach me on
             my socials.
-          </span>
+          </p>
           <p>
             If you have successfully been granted by me to access the app, you
             can now proceed in using the app.

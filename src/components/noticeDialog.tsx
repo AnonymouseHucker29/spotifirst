@@ -28,20 +28,20 @@ const NoticeDialog = () => {
           <DialogTitle className="text-2xl font-bold">Notice</DialogTitle>
         </DialogHeader>
         <DialogDescription className="flex flex-col font-normal text-sm gap-y-4">
-          <span>
+          <p>
             Due to Spotify&apos;s policies, this app{" "}
             <span className="font-black">won&apos;t work</span> on your Spotify
             account unless I granted you access to test this app in development
             mode.
-          </span>
-          <span>
+          </p>
+          <p>
             If you wish to test this app in development mode, please reach me on
             my socials.
           </span>
-          <span>
+          <p>
             If you have successfully been granted by me to access the app, you
             can now proceed in using the app.
-          </span>
+          </p>
         </DialogDescription>
         <DialogFooter className="pt-4">
           <Button

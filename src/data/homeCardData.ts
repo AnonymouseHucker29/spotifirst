@@ -93,7 +93,7 @@ const DataArtistsHomeCard: ArtistsHomeCard[] = [
     id: 4,
     artistName: "Eraserheads",
     imageUrl:
-      "https://lastfm.freetls.fastly.net/i/u/770x0/74d06babb702072b5742b34fda9acb09.jpg#74d06babb702072b5742b34fda9acb09",
+      "https://lastfm.freetls.fastly.net/i/u/770x0/095f3a800dcda8d03fcfd6b3de6555e0.jpg#095f3a800dcda8d03fcfd6b3de6555e0",
   },
   {
     id: 5,

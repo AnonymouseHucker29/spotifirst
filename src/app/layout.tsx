@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import NextAuthSessionProvider from "@/providers/sessionProvider";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "SpotiFirst",
@@ -37,6 +38,7 @@ export default function RootLayout({
               <Navbar />
               {children}
               <Analytics />
+              <SpeedInsights />
               <Footer />
             </main>
           </ThemeProvider>

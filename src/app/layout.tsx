@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <NextAuthSessionProvider>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <main className="antialiased bg-gradient-to-r from-indigo-600 dark:from-black via-purple-500 via-40% to-slate-400 dark:to-slate-800 to-90%">
+            <main className="antialiased bg-gradient-to-b from-[#FFDBC9] dark:from-black via-[#ffdbc9]/80 via-40% to-[#EADDFF]/40 dark:to-slate-800 to-90%">
               <Navbar />
               {children}
               <Footer />

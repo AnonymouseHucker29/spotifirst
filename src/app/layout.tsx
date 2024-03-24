@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/themeProvider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import NextAuthSessionProvider from "@/providers/sessionProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "SpotiFirst",
@@ -35,6 +36,7 @@ export default function RootLayout({
             <main className="antialiased bg-gradient-to-b from-[#FFDBC9] dark:from-black via-[#ffdbc9]/80 via-40% to-[#EADDFF]/40 dark:to-slate-800 to-90%">
               <Navbar />
               {children}
+              <Analytics />
               <Footer />
             </main>
           </ThemeProvider>
